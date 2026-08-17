@@ -1,4 +1,4 @@
-# Apartment-site (Grandeur Shinohara)
+#Grandeur Shinohara
 
 群馬県大泉町の賃貸物件「グランドールシノハラ」の公式サイトです。
 ## 📋 プロジェクト概要
@@ -29,8 +29,3 @@
   - 特定のコピーに対して、視線誘導を高める帯アニメーションを追加。
 - **Swiperの不具合修正**: ループ設定と自動再生、およびナビゲーションクリックの挙動を改善。
 
-## 📂 開発環境のセットアップ
-
-1. リポジトリをクローン:
-   ```bash
-   git clone git@github.com:kuratanimasato/Apartment-site.git
