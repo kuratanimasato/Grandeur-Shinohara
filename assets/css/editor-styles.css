@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+:root {
+  --font-hero-title: clamp(1.25rem, 0.659rem + 2.95vw, 2.875rem);
+  --font-subtitle: clamp(2.3rem, 0.7rem + 3.33vw, 3.2rem);
+<<<<<<< HEAD
+  --font-heading: clamp(1.8rem, 0.5rem + 2.5vw, 2.5rem);
+}
+
+/* テキスト基本設定 */
+=======
+  --font-heading: clamp(2.3rem, 0.7rem + 3.33vw, 3.2rem);
+}
+
+>>>>>>> 7c8d420 (ブログ機能の追加)
+.wp-block-text {
+  font-size: var(--font-text);
+}
+
+<<<<<<< HEAD
+/* タイトル・見出しの共通マージンとフォント設定 */
+.wp-block-title {
+  scroll-behavior: smooth;
+  font-feature-settings: "palt";
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+=======
+>>>>>>> 7c8d420 (ブログ機能の追加)
+.wp-block-title h1,
+.wp-block-title h2,
+.wp-block-title h3,
+.wp-block-title h4,
+.wp-block-title h5,
+.wp-block-title h6 {
+<<<<<<< HEAD
+  margin: 1.5em 0 0.8em;
+  line-height: 1.4;
+}
+
+/* ブロックエディタのH2見出し（不動産サイトらしい左側アクセントライン付き） */
+.wp-block-heading,
+.single-content h2 {
+  font-size: var(--font-heading);
+  position: relative;
+  padding-left: 16px;
+  border-left: 4px solid #007a33; /* メインカラー */
+  margin: 40px 0 20px;
+}
+
+.single-content h3 {
+  font-size: 1.3rem;
+  margin: 30px 0 15px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+/* 通常の段落（背景をなくし、読みやすい行間でシンプルに） */
+.wp-block-paragraph {
+  margin: 1.2em 0;
+  line-height: 1.8;
+}
+
+/* 重要な囲み記事・ボックス用（グループブロックやハイライト用クラス） */
+.wp-block-group.is-style-notice,
+.highlight-box {
+  background-color: #f8fafc; /* 上品な薄い背景色 */
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+  border-left: 4px solid #007a33;
+  margin: 24px 0;
+}
+
+/* 画像の角丸とふんわりしたシャドウ */
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+=======
+  margin: 1.5em 0;
+}
+
+.wp-block-title {
+  scroll-behavior: smooth;
+  font-feature-settings: "palt";
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 見出しの上下の余白と内側余白を調整 */
+.wp-block-heading {
+  font-size: var(--font-heading);
+  margin: 2em 0 0.8em; /* 上の余白を広げ、次の要素との間隔を適度に調整 */
+  padding: 0.2em 0.5em; /* 文字と背景・枠線の余白 */
+}
+
+/* 段落（行間を少し広げ、段落と段落の間隔を調整） */
+.wp-block-paragraph {
+  line-height: 1.8;       /* 行間を少しゆったりに */
+  margin-bottom: 1.5em;   /* 段落下の余白 */
+  text-indent: 0;         /* 読みやすさのためインデントをリセット */
+}
+
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+>>>>>>> 7c8d420 (ブログ機能の追加)
+}
+
+figure.aligncenter {
+  display: block;
+<<<<<<< HEAD
+  margin-left: auto;
+  margin-right: auto;
+=======
+  margin: 2rem auto; /* 画像の上下の余白を確保 */
+>>>>>>> 7c8d420 (ブログ機能の追加)
+  text-align: center;
+}
+
+figure.alignleft {
+  float: left;
+  margin: 1rem 2rem 2rem 0;
+}
+
+figure.alignright {
+  float: right;
+  margin: 1rem 0 2rem 2rem;
+}
+
+<<<<<<< HEAD
+/* 引用 */
+.wp-block-quote {
+  border-left: 3px solid #cbd5e1;
+  padding-left: 16px;
+  margin: 24px 0;
+  color: #475569;
+  font-style: italic;
+  background: #fdfdfd;
+  padding-top: 8px;
+  padding-bottom: 8px;
+=======
+/* 引用（文字周りのパディング・余白を調整） */
+.wp-block-quote {
+  border-left: 3px solid #ddd;
+  padding: 1em 1.2em;     /* 文字と枠の間に余白を追加 */
+  margin: 1.8em 0;        /* 前後の余白 */
+  font-style: italic;
+  background-color: #fafafa; /* うすい背景色で馴染ませる場合 */
+>>>>>>> 7c8d420 (ブログ機能の追加)
+}
+
+.wp-block-quote cite {
+  display: block;
+  text-align: right;
+  font-size: smaller;
+<<<<<<< HEAD
+  margin-top: 8px;
+}
+
+/* コードブロック */
+.wp-block-code {
+  background-color: #f1f5f9;
+  padding: 16px;
+  border-radius: 6px;
+  overflow: auto;
+  font-family: monospace;
+}
+
+/* リスト（箇条書き・番号付き） */
+.wp-block-list {
+  margin: 1.2rem 0;
+  padding-left: 20px;
+  line-height: 1.7;
+=======
+  margin-top: 0.8em;
+}
+
+/* コードブロック（内側の余白を少し広く） */
+.wp-block-code {
+  background-color: #f0f0f0;
+  padding: 15px;          /* 文字と枠の余白 */
+  margin: 1.5em 0;
+  overflow: auto;
+}
+
+/* リスト（リスト全体と項目の余白） */
+.wp-block-list {
+  margin: 1.5em 0;
+  padding-left: 25px;
+>>>>>>> 7c8d420 (ブログ機能の追加)
+}
+
+.wp-block-list ul {
+  list-style-type: disc;
+<<<<<<< HEAD
+  margin-left: 20px;
+=======
+  margin-left: 10px;
+>>>>>>> 7c8d420 (ブログ機能の追加)
+}
+
+.wp-block-list ol {
+  list-style-type: decimal;
+<<<<<<< HEAD
+  margin-left: 20px;
+}
+
+.wp-block-list li {
+  margin: 0.5rem 0;
+}
+
+/* 埋め込み系 */
+.wp-block-embed {
+  max-width: 100%;
+  margin: 24px 0;
+=======
+  margin-left: 10px;
+}
+
+.wp-block-list li {
+  margin: 0.6em 0;        /* 箇条書きの項目同士の間隔 */
+  line-height: 1.6;
+}
+
+.wp-block-embed {
+  max-width: 100%;
+  margin: 1.5em 0;
+>>>>>>> 7c8d420 (ブログ機能の追加)
+}
