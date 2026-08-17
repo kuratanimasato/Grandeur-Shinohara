@@ -7,7 +7,7 @@
   /* カラー */
   --base-color: #fff;
   --main-color: #a49564;
-  --accent-color: #007a33;
+  --accent-color: #6b8e23;
   --accent-color2: #5a5a5a56;
   --accent-color3: #0f77b9;
   --text-color: #333;
@@ -186,13 +186,15 @@ p {
 .header-tel-pc::before {
   content: "お問い合わせはこちらから";
   position: absolute;
-  top: -2px;
-  left: 86px;
+  top: 0;
+  left:40%;
+  right: 40%;
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
   color: var(--text-color);
   white-space: pre;
+
 }
 
 /* 電話番号リンク共通 */
@@ -207,7 +209,25 @@ p {
 .header-tel-link .tel {
   margin-right: 6px;
 }
+/*Instagramアイコン*/
+.header-sns-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;   /* 丸い背景全体の大きさ（必要に応じて44px〜52pxなどに調整） */
+  height: 52px;  /* widthと同じ値にして正円にする */
+  color: var(--accent-color);
+  border-radius: 50%;
+  font-size: 24px; /* 中のInstagramアイコン自体の大きさ */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  margin: 0 10px;
+}
 
+.header-sns-icon:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
 .header-tel-pc .header-tel-link {
   color: var(--accent-color3);
 }
@@ -702,10 +722,13 @@ p {
 
 .features-title::before {
   content: 'FEATURES';
-  font-size: 11px;
-  font-weight: 500;
+  display: block;
+  text-align: center;
+  font-size: 14px;
   color: var(--accent-color);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 /* 全幅背景画像エリア */
@@ -836,6 +859,7 @@ p {
 
 .information {
   padding: 80px 0;
+  text-align: center;
 }
 
 /* 英字サブラベル付き見出し */
@@ -851,10 +875,13 @@ p {
 
 .information-title::before {
   content: 'NEWS';
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--accent-color);
-  letter-spacing: 0.15em;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #6b8e23;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .information__list {
@@ -1594,10 +1621,10 @@ p {
 .news-title::before,
 .room-title::before,
 .blog-title::before {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--accent-color);
-  letter-spacing: 0.15em;
+  font-size: 14px;
+  color: #6b8e23;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }
 
 .exterior-title::before {

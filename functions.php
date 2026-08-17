@@ -284,6 +284,7 @@ function myTheme_enqueue_style_script()
 
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/assets/css/style.css', array(), null);
     wp_enqueue_style('custom-style-root', get_template_directory_uri() . '/style.css', array(), null);
+    wp_enqueue_style('faq-css', get_template_directory_uri() . '/assets/css/faq.css', array(), null);
     wp_enqueue_style('main-css', get_template_directory_uri() . '/assets/css/main.css', array(), null);
 
     wp_enqueue_style('reset-style', get_template_directory_uri() . '/assets/css/reset.css', array(), null);
@@ -292,6 +293,7 @@ function myTheme_enqueue_style_script()
     wp_enqueue_script('smooth-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js', array('gsap'), null, true);
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('gsap', 'scrolltrigger', 'swiper'), null, true);
+    wp_enqueue_script('faq-script', get_template_directory_uri() . '/assets/js/faq.js', array('custom-script'), null, true);
 }
 
 add_action('wp_enqueue_scripts', 'myTheme_enqueue_style_script');

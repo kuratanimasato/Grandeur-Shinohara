@@ -214,6 +214,10 @@ get_header();
           <?php wp_reset_postdata(); ?>
       </section>
     </div>
+    <!-- Q&Aセクション -->
+    <section class="faq">
+      <?php get_template_part('template-parts/faq-parts'); ?>
+    </section>
     <section class="contact">
       <?php get_template_part('template-parts/contact-info'); ?>
     </section>

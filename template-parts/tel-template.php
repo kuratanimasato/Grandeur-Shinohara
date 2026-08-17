@@ -1,3 +1,5 @@
+
+
 <?php if ($phone_number = get_theme_mod('phone_number')): ?>
   <?php $pure_phone_number = str_replace('-', '', $phone_number); ?>
 

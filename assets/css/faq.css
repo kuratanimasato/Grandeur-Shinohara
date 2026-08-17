@@ -1,0 +1,184 @@
+
+:root {
+  /* カラー */
+  --base-color: #fff;
+  --main-color: #a49564;
+  --accent-color: #6b8e23;
+  --accent-color2: #5a5a5a56;
+  --accent-color3: #0f77b9;
+  --text-color: #333;
+
+  /* フォントサイズ */
+  --font-hero-title: clamp(20px, 2vw, 46px);
+  --font-subtitle: clamp(18px, 3.2vw, 30px);
+  --font-heading: clamp(28px, 4.3vw, 40px);
+  --font-text: clamp(16px, 2.3vw, 32px);
+}
+/* Q&Aセクション全体 */
+.faq {
+  padding: 80px 20px;
+  background-color:#f5f6f2;
+}
+
+.faq__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq__subtitle {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #6b8e23;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.faq__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 1.5rem;
+  font-size: var(--font-subtitle);
+  color: var(--text-color);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 質問アイテム */
+.faq__item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq__item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 質問ボタン */
+.faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.faq__q-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #6b8e23;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.faq__q-text {
+  flex-grow: 1;
+  font-size: 18px;
+
+}
+
+/* プラス・マイナスアイコン */
+.faq__toggle-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.faq__toggle-icon::before,
+.faq__toggle-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #666;
+  transition: transform 0.3s ease;
+}
+
+.faq__toggle-icon::before {
+  top: 7px;
+  left: 0;
+  width: 16px;
+  height: 2px;
+}
+
+.faq__toggle-icon::after {
+  top: 0;
+  left: 7px;
+  width: 2px;
+  height: 16px;
+}
+
+/* 開いたときのアイコンの変形 */
+.faq__item.is-open .faq__toggle-icon::after {
+  transform: rotate(90deg);
+}
+
+/* 回答エリア（CSSグリッドを使ったスムーズな開閉） */
+.faq__answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  background-color: #fafafa;
+}
+
+.faq__answer-inner {
+  overflow: hidden;
+  display: flex;
+  padding: 0 20px;
+  transition: padding 0.3s ease;
+}
+
+.faq__a-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.faq__a-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.faq__item.is-open .faq__answer {
+  grid-template-rows: 1fr;
+}
+
+.faq__item.is-open .faq__answer-inner {
+  padding: 0 20px 20px 20px;
+}
