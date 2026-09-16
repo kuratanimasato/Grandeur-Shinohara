@@ -82,6 +82,7 @@ p {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  background-color: #f7f9fa;
 }
 
 .container {
@@ -706,7 +707,7 @@ p {
 .features__box-title {
   display: inline-block;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.6;
   background: linear-gradient(transparent 60%, #ffeb3b 60%);
   padding: 0 4px;
@@ -730,7 +731,7 @@ p {
   content: "FEATURES";
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   color: var(--accent-color);
   letter-spacing: 0.1em;
   margin-bottom: 8px;
@@ -800,7 +801,7 @@ p {
   margin: 20px 0;
   background-color: #fff;
   border-radius: 14px 14px 0 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -808,8 +809,8 @@ p {
 
 /* ホバーで浮き上がる */
 .features__box-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .features__txt {
@@ -874,6 +875,16 @@ p {
 .information {
   padding: 80px 0;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .information {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .information {
+    padding: 50px 0;
+  }
 }
 
 /* 英字サブラベル付き見出し */

@@ -28,24 +28,34 @@
 .faq__subtitle {
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 1px;
   color: var(--accent-color);
   letter-spacing: 0.1em;
   margin-bottom: 8px;
   font-weight: bold;
 }
-
 .faq__title {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-bottom: 1.5rem;
+  position: relative;
+  /* 中央揃えにするため、テキストをセンターに */
+  text-align: center;
   font-size: var(--font-subtitle);
   color: var(--text-color);
-  text-align: center;
   letter-spacing: 0.05em;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
+/* 左側の斜めのあしらい */
+.faq__title::before {
+  content: "Q&A";
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: var(--accent-color);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 .faq__list {
   display: flex;
   flex-direction: column;
@@ -98,7 +108,15 @@
   flex-grow: 1;
   font-size: 18px;
 }
-
+/* スマホ表示（767px以下）の場合の微調整例 */
+@media screen and (max-width: 767px) {
+  .faq__q-text {
+    font-size: 16px;
+  }
+  .faq {
+    padding: 60px 20px;
+  }
+}
 /* プラス・マイナスアイコン */
 .faq__toggle-icon {
   position: relative;
@@ -179,4 +197,23 @@
 
 .faq__item.is-open .faq__answer-inner {
   padding: 0 20px 20px 20px;
+}
+@media screen and (max-width: 375px) {
+  .fap {
+    padding: 50px 20px;
+  }
+  .faq__q-text {
+    font-size: 15px; /* 375px幅でもすっきり収まるサイズ */
+    line-height: 1.4;
+  }
+
+  .faq__question {
+    padding: 12px; /* タップ領域を保ちつつ余白をややコンパクトに */
+    gap: 8px; /* Qアイコンとの間隔を少し詰める */
+  }
+
+  .faq__q-icon,
+  .faq__a-icon {
+    font-size: 1.1rem; /* アイコンも文字に合わせて微調整 */
+  }
 }

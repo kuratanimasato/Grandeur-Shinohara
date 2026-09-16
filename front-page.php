@@ -139,12 +139,8 @@ get_header();
                 </div>
             </section>
             <section class="features">
-                        <?php  echo get_template_part('template-parts/loop-features');?>
-                    <div class="features-button">
-                        <?php echo get_template_part('template-parts/room-feature'); ?>
-                    </div>
-                </div>
-            </section>
+                <?php  echo get_template_part('template-parts/loop-features');?>
+           </section>
             <section class="information">
                 <?php get_template_part('template-parts/loop-information'); ?>
             </section>

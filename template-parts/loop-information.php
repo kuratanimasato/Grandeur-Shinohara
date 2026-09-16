@@ -1,4 +1,4 @@
- <h2 class="information-title">お知らせ</h2>
+<h2 class="information-title" data-label="NEWS">お知らせ</h2>
  <?php
 $news_query = new WP_Query([
 'post_type'      => 'post',

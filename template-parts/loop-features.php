@@ -57,12 +57,15 @@
                     alt="スーパー・100均至近！" width="460" height="300" loading="lazy">
             </picture>
             <div class="features__txt">
-                <h3 class="features__box-title">スーパー・100均至近で賢く節約！</h3>
+                <h3 class="features__box-title">スーパー・100均至近で節約！</h3>
                 <p class="features__description">
                     徒歩圏内で買い物が完結。車がなくても生活コストを抑えて、無駄のない暮らしを叶えます。
                 </p>
             </div>
-        </div>
 
+        </div>
+    </div>
+    <div class="features-button">
+        <?php echo get_template_part('template-parts/room-feature'); ?>
     </div>
 </div>
