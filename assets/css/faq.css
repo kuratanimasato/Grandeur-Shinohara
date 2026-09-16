@@ -1,13 +1,12 @@
-
 :root {
   /* カラー */
   --base-color: #fff;
   --main-color: #a49564;
-  --accent-color: #6b8e23;
+  --accent-color: #007a33;
   --accent-color2: #5a5a5a56;
-  --accent-color3: #0f77b9;
+  --accent-color3: #0065ad;
   --text-color: #333;
-
+  --button-color: #0065ad;
   /* フォントサイズ */
   --font-hero-title: clamp(20px, 2vw, 46px);
   --font-subtitle: clamp(18px, 3.2vw, 30px);
@@ -17,7 +16,7 @@
 /* Q&Aセクション全体 */
 .faq {
   padding: 80px 20px;
-  background-color:#f5f6f2;
+  background-color: #f5f6f2;
 }
 
 .faq__wrap {
@@ -30,7 +29,7 @@
   display: block;
   text-align: center;
   font-size: 14px;
-  color: #6b8e23;
+  color: var(--accent-color);
   letter-spacing: 0.1em;
   margin-bottom: 8px;
   font-weight: bold;
@@ -87,7 +86,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  background-color: #6b8e23;
+  background-color: var(--accent-color);
   color: #fff;
   border-radius: 4px;
   font-size: 14px;
@@ -98,7 +97,6 @@
 .faq__q-text {
   flex-grow: 1;
   font-size: 18px;
-
 }
 
 /* プラス・マイナスアイコン */
@@ -112,7 +110,7 @@
 
 .faq__toggle-icon::before,
 .faq__toggle-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: #666;
   transition: transform 0.3s ease;
@@ -158,7 +156,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  background-color: #333;
+  background-color: var(--accent-color3);
   color: #fff;
   border-radius: 4px;
   font-size: 14px;

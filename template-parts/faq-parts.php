@@ -38,13 +38,28 @@
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false" onclick="toggleFaq(this)">
             <span class="faq__q-icon">Q</span>
+            <span class="faq__q-text">入居の申し込みや内見、物件に関する問い合わせはどうすればよいですか？</span>
+            <span class="faq__toggle-icon"></span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              <span class="faq__a-icon">A</span>
+              <p class="faq__a-text">当物件の入居管理・契約手続き・内見のご案内は、すべて提携不動産会社サクセス不動産へ委託しております。
+              迅速かつスムーズに対応させていただくため、お電話等はサクセス不動産へ直接ご連絡をお願いいたします。</p>
+            </div>
+          </div>
+        </div>
+        <!-- 質問4 -->
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq__q-icon">Q</span>
             <span class="faq__q-text">フリーレントについて詳しく教えてください。</span>
             <span class="faq__toggle-icon"></span>
           </button>
           <div class="faq__answer">
             <div class="faq__answer-inner">
               <span class="faq__a-icon">A</span>
-              <p class="faq__a-text">フリーレント期間が適用されるプランをご用意しております。詳細な条件についてはお気軽にお問い合わせください。</p>
+              <p class="faq__a-text">フリーレント1ヶ月 1年未満の解約で違約金発生します。詳細な条件についてはお気軽にお問い合わせください。</p>
             </div>
           </div>
         </div>

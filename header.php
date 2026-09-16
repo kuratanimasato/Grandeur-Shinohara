@@ -36,7 +36,6 @@
             <span>Grandeur Shinohara</span>
           </a>
         </<?php echo $tag; ?>>
-        <?php get_template_part('template-parts/sns-parts'); ?>
         <?php get_template_part('template-parts/header-tel'); ?>
       </div><nav class="main-navigation">
         <?php

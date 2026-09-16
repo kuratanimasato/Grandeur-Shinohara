@@ -7,9 +7,6 @@ if ($phone_number):
   ?>
 
   <div class="header-tel-pc">
-    <a href="" target="_blank" rel="noopener noreferrer" class="header-sns-icon" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
     <a href="tel:<?php echo esc_attr($pure_phone_number); ?>" class="header-tel-link">
       <i class="fa-solid fa-phone fa-lg tel"></i>
       <span class="header-tel-text"><?php echo esc_html($phone_number); ?></span>

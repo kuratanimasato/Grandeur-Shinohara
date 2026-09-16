@@ -25,7 +25,7 @@
   </div>
 </div>
 <div class="container">
-   <?php get_template_part('template-parts/breadcrumb-parts'); ?>
+  <?php get_template_part('template-parts/breadcrumb-parts'); ?>
 </div>
 =======
 <?php

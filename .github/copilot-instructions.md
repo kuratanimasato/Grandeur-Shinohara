@@ -2,7 +2,7 @@
 grandeur-shinoharaです
 既存のWordPressサイトを壊さず、保守性・可読性・セキュリティを重視して開発してください。
 リポジトリURL
-https://github.com/kuratanimasato/Apartment-site.git
+https://github.com/kuratanimasato/Grandeur-Shinohara.git
 Gitルール：
 
 - masterは本番用
