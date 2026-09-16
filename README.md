@@ -21,7 +21,7 @@
   - [SmoothScroll](https://github.com/cferdinandi/smooth-scroll) - スムーズスクロール
 - **Design/Dev Tools**: Zed Editor, Git/GitHub
 
-## 🚀 最近の主な修正事項 (2026年8月)
+## 🚀 最近の主な修正事項 (2026年9月)
 
 #### 🎨 UI/UX・デザインの改善
 * **ファーストビュー（FV）のレイアウト最適化**
