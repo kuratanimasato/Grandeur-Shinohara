@@ -700,7 +700,17 @@ p {
 .features__title {
   text-align: center;
 }
-
+.features__txt {
+  text-align: center;
+}
+.features__box-title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background: linear-gradient(transparent 60%, #ffeb3b 60%);
+  padding: 0 4px;
+}
 .features__description {
   font-size: 1.4rem;
 }
@@ -759,10 +769,11 @@ p {
 }
 
 .features-img {
+  display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  aspect-ratio: 23 / 15;
   border-radius: 14px 14px 0 0;
 }
 
@@ -2623,7 +2634,16 @@ p {
 
   .features__box-item {
     width: 100%;
+    max-width: 460px;
     text-align: center;
+  }
+
+  .features__txt {
+    padding: 16px;
+  }
+
+  .features__description {
+    font-size: 1.3rem;
   }
 
   /* SPではお知らせを縦並び */

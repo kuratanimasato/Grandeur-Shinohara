@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300">
+  <!-- 背景 -->
+  <rect width="460" height="300" fill="#007a33" rx="8"/>
+  <rect x="10" y="10" width="440" height="280" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3" rx="6"/>
+  
+  <!-- タイトル（見出しのみ） -->
+  <text x="230" y="85" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="900" font-family="'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif">スーパー・100均至近！</text>
+  
+  <!-- イラストエリア -->
+  <g transform="translate(130, 125)">
+    <!-- カートと食材 -->
+    <path d="M 20 20 L 35 20 L 48 60 L 95 60 L 105 30 L 38 30" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="55" cy="72" r="6" fill="#333"/>
+    <circle cx="88" cy="72" r="6" fill="#333"/>
+    <!-- 野菜・紙袋 -->
+    <path d="M 50 30 L 50 15 L 68 15 L 68 30 Z" fill="#edbb99" stroke="#333" stroke-width="2"/>
+    <circle cx="78" cy="22" r="8" fill="#e74c3c"/>
+
+    <!-- 100均コイン・自転車 -->
+    <circle cx="130" cy="35" r="14" fill="#f4d03f" stroke="#333" stroke-width="2"/>
+    <text x="130" y="40" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">100</text>
+
+    <circle cx="130" cy="68" r="10" fill="none" stroke="#333" stroke-width="2"/>
+    <circle cx="160" cy="68" r="10" fill="none" stroke="#333" stroke-width="2"/>
+    <polyline points="130,68 142,52 160,68 M 142,52 L 152,52" fill="none" stroke="#333" stroke-width="2"/>
+  </g>
+</svg>
