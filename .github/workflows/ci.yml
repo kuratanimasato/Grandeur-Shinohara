@@ -1,0 +1,129 @@
+name: Grandeur Shinohara CI/CD
+
+on:
+  push:
+    branches:
+      - fix/ci-cd
+      - fix/main
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: WordPress Theme CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          tools: composer:v2
+          coverage: none
+
+      - name: PHP Syntax Check
+        run: |
+          find . \
+            -type f \
+            -name "*.php" \
+            -not -path "./vendor/*" \
+            -print0 | xargs -0 -n1 php -l
+
+      - name: Install Composer dependencies
+        if: ${{ hashFiles('composer.json') != '' }}
+        run: |
+          composer install \
+            --no-interaction \
+            --prefer-dist \
+            --no-progress
+
+      - name: WordPress Coding Standards
+        if: ${{ hashFiles('inc/assets.php') != '' }}
+        run: >
+          vendor/bin/phpcs
+          --warning-severity=0
+          functions.php
+          inc/assets.php
+          inc/content-types.php
+          inc/customizer.php
+          inc/navigation.php
+          inc/site-customizer.php
+          inc/theme-setup.php
+
+  frontend:
+    name: Frontend CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        if: ${{ hashFiles('package-lock.json') != '' }}
+        run: npm ci
+
+      - name: Run lint
+        if: ${{ hashFiles('package.json') != '' }}
+        run: npm run lint --if-present
+
+      - name: Build
+        if: ${{ hashFiles('package.json') != '' }}
+        run: npm run build --if-present
+
+  deploy:
+    name: Deploy to Shinfreeserver
+    runs-on: ubuntu-latest
+
+    needs:
+      - test
+      - frontend
+
+    if: >
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main'
+
+    environment:
+      name: production
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy theme to Shinfreeserver
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: /grandeur-shinohara.com/public_html/wp-content/themes/grandeur-shinohara/
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/vendor/**
+            **/tests/**
+            **/.DS_Store
+            **/README.md
+            **/composer.json
+            **/composer.lock
+            **/package.json
+            **/package-lock.json
+            **/phpcs.xml
+            **/phpcs.xml.dist
