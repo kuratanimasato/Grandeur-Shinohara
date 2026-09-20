@@ -6,12 +6,12 @@
 
 - https://github.com/kuratanimasato/Apartment-site.git
 
-### main
+### master
 
 - 本番用ブランチ。
 - 直接編集・直接コミットしない。
 - 未検証のコードを入れない。
-- fix/mainで動作確認が完了してからPull Requestでマージする。
+- fix/mainで動作確認が完了してからマージする。
 
 ### fix/main
 
@@ -22,7 +22,7 @@
 
 ## Merge Rules
 
-fix/mainからmainへのマージは、以下をすべて確認してから行う。
+fix/mainからmasterへのマージは、以下をすべて確認してから行う。
 
 1. PHPエラーがない
 2. JavaScriptエラーがない
@@ -32,7 +32,7 @@ fix/mainからmainへのマージは、以下をすべて確認してから行�
 6. 既存機能が壊れていない
 7. WordPress管理画面が正常に動作する
 
-動作確認が完了していない場合、mainへマージしない。
+動作確認が完了していない場合、masterへマージしない。
 
 ## WordPress Rules
 
