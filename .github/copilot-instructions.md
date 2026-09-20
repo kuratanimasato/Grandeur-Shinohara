@@ -5,12 +5,12 @@ grandeur-shinoharaです
 https://github.com/kuratanimasato/Grandeur-Shinohara.git
 Gitルール：
 
-- masterは本番用
+- mainは本番用
 - fix/mainは開発・修正・動作確認用
 - 開発・修正はfix/mainで行う
-- masterへ直接コミットしない
-- fix/mainで動作確認が完了するまでmasterへマージしない
-- 未検証のコードをmasterへ反映しない
+- mainへ直接コミット・pushしない
+- fix/mainで動作確認が完了してからPull Requestでmainへマージする
+- 未検証のコードをmainへ反映しない
 - WordPressの標準的な設計を優先する
 - WordPress Coding Standardsを意識する
 - WordPressの既存APIを優先して使用する
